@@ -123,7 +123,7 @@ function MyForm() {
     setInputValue(value);
 
     if(value.length < 5) {
-      setInputError('Input must be at least 5 characters';)
+      setInputError('Input must be at least 5 characters');
     }else{
       setInputError(null);
     }
@@ -149,5 +149,6 @@ function MyForm() {
     </form>
   );
 } 
+
 export default App;
  
