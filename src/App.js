@@ -14,6 +14,8 @@ function App() {
       <Multiple />
       <br />
       <MyForm />
+      <br />
+      <Login />
     </div>
   );
 }
@@ -105,17 +107,14 @@ function Multiple() {
       <br />
       <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
       <br />
-
       <label htmlFor="email">Email:</label>
       <br />
       <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
       <br />
-
       <label htmlFor="message">Message:</label>
       <br />
       <textarea id="message" name="message" value={formData.message} onChange={handleChange}/>
       <br />
-
       <button type="submit">Submit</button>
     </form>
   );
@@ -142,6 +141,8 @@ function MyForm() {
   function handleSubmit(event) {
     event.preventDefalt();
     if (inputValue.length >= 5) {
+     
+     
 
     }else{
       setInputError('Input must be at least 5 characters');
@@ -159,6 +160,25 @@ function MyForm() {
     </form>
   );
 } 
+
+
+function Login() {
+  return (
+    <form>
+      <label>
+        Username:
+        <input type="text" name="username" placeholder='Username..'/>
+      </label>
+      <label>
+        Password:
+        <input type="password" name="password" placeholder='Password..'/>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  );
+}
+
+
 
 export default App;
  
